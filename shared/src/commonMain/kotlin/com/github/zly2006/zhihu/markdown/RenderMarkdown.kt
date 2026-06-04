@@ -267,7 +267,7 @@ fun RenderMarkdown(
             NoDoubleClickSelectionScope {
                 Markdown(
                     document = document,
-                    imageContent = ::RenderImage,
+                    imageContent = { data, modifier -> RenderImage(data, modifier) },
                     scrollState = scrollState,
                     enableScroll = enableScroll,
                     enableSelection = selectable,

@@ -24,7 +24,7 @@ struct LoginWebView: UIViewRepresentable {
         return webView
     }
 
-    func updateUIViewController(_ uiView: WKWebView, context: Context) {}
+    func updateUIView(_ uiView: WKWebView, context: Context) {}
 
     func makeCoordinator() -> Coordinator {
         Coordinator(onCookiesExtracted: onCookiesExtracted)
@@ -52,7 +52,7 @@ struct LoginWebView: UIViewRepresentable {
                         cookie.domain.contains("zhihu.com")
                     }
                     if !zhihuCookies.isEmpty {
-                        onCookiesExtracted(zhihuCookies)
+                        self.onCookiesExtracted(zhihuCookies)
                     }
                 }
             }
