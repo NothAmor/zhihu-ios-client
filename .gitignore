@@ -1,0 +1,26 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+
+# KMP
+shared/build/
+shared/schemas/
+
+# Xcode
+ZhihuApp/*.xcworkspace
+ZhihuApp/Pods/
+ZhihuApp/DerivedData/
+*.xcuserdata/
+
+# Secrets
+.secret/
+local.properties
+
+# Rust
+target/
