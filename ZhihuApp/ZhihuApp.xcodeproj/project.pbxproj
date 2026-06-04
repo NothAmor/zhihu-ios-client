@@ -11,6 +11,9 @@
 		A10000010000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000002 /* ContentView.swift */; };
 		A10000010000000000000003 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000003 /* AppState.swift */; };
 		A10000010000000000000004 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000010000000000000004 /* Shared.framework */; };
+		A10000010000000000000005 /* LoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000007 /* LoginWebView.swift */; };
+		A10000010000000000000006 /* PlatformHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000008 /* PlatformHelpers.swift */; };
+		A10000010000000000000007 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000009 /* KeychainHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		A20000010000000000000004 /* Shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Shared.framework; path = "../shared/build/XCFrameworks/debug/Shared.framework"; sourceTree = "<group>"; };
 		A20000010000000000000005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A20000010000000000000006 /* ZhihuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhihuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000010000000000000007 /* LoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWebView.swift; sourceTree = "<group>"; };
+		A20000010000000000000008 /* PlatformHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformHelpers.swift; sourceTree = "<group>"; };
+		A20000010000000000000009 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,9 @@
 				A20000010000000000000001 /* App.swift */,
 				A20000010000000000000002 /* ContentView.swift */,
 				A20000010000000000000003 /* AppState.swift */,
+				A20000010000000000000007 /* LoginWebView.swift */,
+				A20000010000000000000008 /* PlatformHelpers.swift */,
+				A20000010000000000000009 /* KeychainHelper.swift */,
 				A20000010000000000000005 /* Info.plist */,
 			);
 			path = ZhihuApp;
@@ -154,6 +163,9 @@
 				A10000010000000000000001 /* App.swift in Sources */,
 				A10000010000000000000002 /* ContentView.swift in Sources */,
 				A10000010000000000000003 /* AppState.swift in Sources */,
+				A10000010000000000000005 /* LoginWebView.swift in Sources */,
+				A10000010000000000000006 /* PlatformHelpers.swift in Sources */,
+				A10000010000000000000007 /* KeychainHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
