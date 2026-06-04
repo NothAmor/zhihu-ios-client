@@ -12,6 +12,8 @@ package com.github.zly2006.zhihu.shared.platform
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import com.github.zly2006.zhihu.ui.openIosUrl
+import kotlinx.cinterop.ExperimentalForeignApi
+import kotlinx.cinterop.useContents
 import platform.UIKit.UIPasteboard
 import platform.UIKit.UIScreen
 
@@ -43,24 +45,23 @@ actual fun PlatformBackHandler(enabled: Boolean, onBack: () -> Unit) {
 @Composable
 actual fun rememberSettingsStore(): SettingsStore = rememberIosSettingsStore()
 
+@OptIn(ExperimentalForeignApi::class)
 @Composable
 actual fun rememberScreenSizeDp(): ScreenSizeDp {
     val screen = remember { UIScreen.mainScreen }
-    val bounds = remember { screen.bounds }
     val scale = remember { screen.scale }
+    val bounds = remember { screen.bounds }
     return remember(bounds, scale) {
+        val size = bounds.useContents { size }
         ScreenSizeDp(
-            width = (bounds.useContents.size.width * scale).toFloat(),
-            height = (bounds.useContents.size.height * scale).toFloat(),
+            width = (size.width * scale).toFloat(),
+            height = (size.height * scale).toFloat(),
         )
     }
 }
 
 @Composable
 actual fun rememberUserMessageSink(): UserMessageSink {
-    // iOS toast messages are handled by the Compose UI layer
-    // The SnackbarHost in Material3 provides this functionality
-    // For now, use a basic implementation; wire up to SwiftUI alert later
     return remember {
         UserMessageSink(
             showShortMessage = { message ->

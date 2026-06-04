@@ -19,6 +19,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.github.zly2006.zhihu.navigation.Article
 import com.github.zly2006.zhihu.shared.account.IosAccountStore
+import com.github.zly2006.zhihu.shared.platformName
 import com.github.zly2006.zhihu.shared.data.RecommendationMode
 import com.github.zly2006.zhihu.shared.data.ZhihuJson
 import com.github.zly2006.zhihu.shared.data.fetchVerifiedZhihuProfile

@@ -53,18 +53,14 @@ fun rememberIosSettingsStore(): SettingsStore {
             },
             getLong = { key, defaultValue ->
                 if (defaults.objectForKey(key) != null) {
-                    // NSUserDefaults stores integers as NSInteger (Long)
-                    val obj = defaults.objectForKey(key)
-                    when (obj) {
-                        is NSNumber -> obj.longLongValue
-                        else -> defaultValue
-                    }
+                    // NSUserDefaults stores numbers; try to extract as integer
+                    defaults.integerForKey(key)
                 } else {
                     defaultValue
                 }
             },
             putLong = { key, value ->
-                defaults.setObject(NSNumber.numberWithLongLong(value), key)
+                defaults.setObject(NSNumber(long = value), key)
                 defaults.synchronize()
             },
             getFloat = { key, defaultValue ->
